@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Faros Plus</title>
+  <meta name="description" content="Kontaktirajte Faros Plus — telefon, email i adresa u Beogradu, Srbija." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header scrolled" id="site-header">
+    <div class="header-inner container">
+      <a href="index-sr.html" class="logo"><img src="images/logo.png" alt="Faros Plus" /></a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index-sr.html">Početna</a></li>
+          <li><a href="about-sr.html">O nama</a></li>
+          <li><a href="service-sr.html">Usluge</a></li>
+          <li><a href="projects-sr.html">Projekti</a></li>
+          <li><a href="contact-sr.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch"><a href="contact.html">EN</a><a href="contact-sr.html" class="active">SR</a></div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Meni"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Kontakt</h1>
+      <p>Javite nam se za ponudu, pitanje ili razgovor o projektu.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container contact-grid">
+
+      <div class="contact-info">
+        <h2>Stupite u kontakt</h2>
+        <p>Dostupni smo za nove projekte, partnerstvo u podizvadjačkim radovima i direktne upite klijenata. Kontaktirajte nas telefonom ili emailom i brzo ćemo odgovoriti.</p>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <span>Telefon</span>
+            <a href="tel:+381633627780">+381 63 362 778</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <span>Email</span>
+            <a href="mailto:office@farosplus.com">office@farosplus.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <span>Adresa</span>
+            <address>Takovska 45<br />Beograd, Srbija</address>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <div>
+            <span>Podaci o firmi</span>
+            <p style="margin:0;">Matični broj: 21357308<br />PIB: 110507554</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h2>Pošaljite poruku</h2>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Ime i prezime</label>
+            <input type="text" id="name" name="name" placeholder="Vaše ime" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="vas@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon (opciono)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+381 ..." />
+          </div>
+          <div class="form-group">
+            <label for="message">Poruka</label>
+            <textarea id="message" name="message" rows="5" placeholder="Opišite vaš projekat ili pitanje..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Pošalji poruku</button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap"><img src="images/logo.png" alt="Faros Plus" class="footer-logo" /></div>
+        <p>Suva gradnja.<br />Izvedeno sa preciznošću.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Informacije</h4><ul><li><a href="about-sr.html">O nama</a></li><li><a href="service-sr.html">Usluge</a></li><li><a href="projects-sr.html">Projekti</a></li><li><a href="contact-sr.html">Kontakt</a></li></ul></div>
+      <div class="footer-col"><h4>Usluge</h4><ul><li><a href="service-sr.html">Zvučna izolacija</a></li><li><a href="service-sr.html">Montaža gipsanih ploča</a></li><li><a href="service-sr.html">Renovacije</a></li><li><a href="service-sr.html">Molerski radovi</a></li><li><a href="service-sr.html">Malterski radovi</a></li></ul></div>
+      <div class="footer-col footer-contact">
+        <h4>Kontakt</h4>
+        <p>Telefon: <a href="tel:+381633627780">+381 63 362 778</a></p>
+        <p>Email: <a href="mailto:office@farosplus.com">office@farosplus.com</a></p>
+        <p>Takovska 45, Beograd, Srbija</p>
+        <p class="footer-legal">Matični broj: 21357308 · PIB: 110507554</p>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container"><span>&copy; 2026 Faros Plus. Sva prava zadržana.</span></div></div>
+  </footer>
+  <a href="#" class="back-to-top" id="back-to-top" aria-label="Nazad na vrh">&#8679;</a>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faros Plus – Dry Construction. Executed with Precision.</title>
+  <meta name="description" content="Faros Plus – professional dry construction, plasterboard installation, soundproofing, renovations and painting works in Serbia." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!--
+    HEADER
+    Fixed sticky bar: logo circle, navigation links, EN/SR language switch.
+    Transparent on homepage; gains .scrolled (navy bg) after 40px scroll.
+    Controlled by main.js — header scroll handler.
+  -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Faros Plus" />
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch">
+        <a href="index.html" class="active">EN</a>
+        <a href="index-sr.html">SR</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!--
+    HERO SLIDER
+    5-slide full-viewport image carousel with overlay text and CTA buttons.
+    Auto-advances every 5.5 s. Supports arrows, dots, and touch swipe.
+    Controlled by main.js — hero slider section.
+  -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+
+      <div class="hero-slide active" style="background-image: url('images/hero1.jpg'); background-position: center top;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <span class="hero-label">Interior Finishing</span>
+          <h1>Precision in Every<br />Square Metre</h1>
+          <p>High-end interior finishing and dry construction for commercial and residential projects across Serbia.</p>
+          <a href="about.html" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="background-image: url('images/hero2.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <span class="hero-label">Large-Scale Projects</span>
+          <h1>Industrial Works<br />Done Right</h1>
+          <p>From warehouses to commercial halls — we deliver on time, on spec, every time.</p>
+          <a href="service.html" class="btn btn-primary">Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="background-image: url('images/hero3.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <span class="hero-label">Renovations &amp; Fit-Out</span>
+          <h1>Your Reliable<br />Building Partner</h1>
+          <p>Full-cycle fit-out and renovation solutions with strict quality control at every stage.</p>
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="background-image: url('images/hero4.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <span class="hero-label">Soundproofing</span>
+          <h1>Silence is<br />Also Built</h1>
+          <p>Professional acoustic and thermal insulation systems for cinemas, offices, and residential buildings.</p>
+          <a href="service.html" class="btn btn-primary">Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero-slide" style="background-image: url('images/hero5.jpg')">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <span class="hero-label">Plaster Works</span>
+          <h1>Smooth Walls,<br />Flawless Finish</h1>
+          <p>Machine and hand-applied plaster systems — from microcement and Venetian finishes to standard skim coat for premium interiors.</p>
+          <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="hero-arrow hero-prev" id="hero-prev" aria-label="Previous slide">&#8592;</button>
+    <button class="hero-arrow hero-next" id="hero-next" aria-label="Next slide">&#8594;</button>
+
+    <div class="hero-dots" id="hero-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <!--
+    ABOUT STRIP
+    Homepage intro: brief company description on the left,
+    key differentiators bullet list on the right.
+  -->
+  <section class="about-strip">
+    <div class="container about-strip-inner">
+      <div class="about-strip-text">
+        <h2>About Faros Plus</h2>
+        <p>Faros Plus is a professional construction finishing company based in Belgrade, Serbia. We specialize in dry construction, plasterboard installation, soundproofing, plaster works, renovations, and painting — serving commercial, industrial, and residential clients.</p>
+        <p>With years of hands-on experience, our teams execute every project with precision — meeting deadlines without compromising quality.</p>
+        <a href="about.html" class="btn btn-outline">More About Us</a>
+      </div>
+      <div class="about-strip-bullets">
+        <h3>Why clients choose us?</h3>
+        <ul>
+          <li>Extensive experience in commercial &amp; industrial projects</li>
+          <li>Fast response times and operational flexibility</li>
+          <li>High standards of quality and workmanship</li>
+          <li>Reliable deadlines — always on schedule</li>
+          <li>Skilled, certified teams on every site</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    SERVICES
+    Horizontal card slider showing 5 service areas with photo thumbnails.
+    Card count is responsive: 3 desktop / 2 tablet / 1 mobile.
+    Controlled by main.js — services card slider section.
+  -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Do</span>
+        <h2>Our Services</h2>
+      </div>
+
+      <div class="services-slider-wrap">
+        <button class="svc-arrow svc-prev" id="svc-prev" aria-label="Previous">&#8592;</button>
+        <div class="services-track-outer">
+          <div class="services-track" id="services-track">
+
+            <div class="service-card-img">
+              <div class="service-card-img-thumb">
+                <img src="images/Cineplexx Galerija/viber_image_2026-03-31_13-01-25-241.jpg" alt="Soundproofing" loading="lazy" />
+              </div>
+              <div class="service-card-img-body">
+                <h3>Soundproofing</h3>
+                <p>Acoustic insulation systems for cinemas, offices, and residential buildings — mineral wool, acoustic batts and multi-layer drywall solutions.</p>
+                <a href="service.html" class="card-link">Learn more &#8594;</a>
+              </div>
+            </div>
+
+            <div class="service-card-img">
+              <div class="service-card-img-thumb">
+                <img src="images/HTEC/20220512_154327.jpg" alt="Plasterboard Installation" loading="lazy" />
+              </div>
+              <div class="service-card-img-body">
+                <h3>Plasterboard Installation</h3>
+                <p>Metal stud framing and gypsum board systems — partition walls, suspended ceilings, fire-rated and acoustic configurations.</p>
+                <a href="service.html" class="card-link">Learn more &#8594;</a>
+              </div>
+            </div>
+
+            <div class="service-card-img">
+              <div class="service-card-img-thumb">
+                <img src="images/Bosch Airport City/20200708_121836.jpg" alt="Renovations" loading="lazy" />
+              </div>
+              <div class="service-card-img-body">
+                <h3>Renovations</h3>
+                <p>Complete interior renovation — layout changes, structural finishing, surface preparation and full fit-out from bare shell to handover.</p>
+                <a href="service.html" class="card-link">Learn more &#8594;</a>
+              </div>
+            </div>
+
+            <div class="service-card-img">
+              <div class="service-card-img-thumb">
+                <img src="images/Sidek/viber_image_2026-03-31_12-57-14-007.jpg" alt="Painting Works" loading="lazy" />
+              </div>
+              <div class="service-card-img-body">
+                <h3>Painting Works</h3>
+                <p>Professional painting and decorative finishes — interior &amp; exterior, standard and premium systems including Oikos Travertino Romano.</p>
+                <a href="service.html" class="card-link">Learn more &#8594;</a>
+              </div>
+            </div>
+
+            <div class="service-card-img">
+              <div class="service-card-img-thumb">
+                <img src="images/Cineplexx Beoshoping/20200110_165630.jpg" alt="Plaster Works" loading="lazy" />
+              </div>
+              <div class="service-card-img-body">
+                <h3>Plaster Works</h3>
+                <p>Machine and hand-applied gypsum, cement and decorative plaster — smooth finishes, skim coat and specialist systems for demanding environments.</p>
+                <a href="service.html" class="card-link">Learn more &#8594;</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="svc-arrow svc-next" id="svc-next" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    PROJECTS
+    3-column preview grid showing 6 featured projects.
+    Hover reveals project name and category overlay.
+    Links to projects.html for full portfolio.
+  -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Portfolio</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-item">
+          <img src="images/Cineplexx Beoshoping/20200121_160617.jpg" alt="Cineplexx Beo Shopping" loading="lazy" />
+          <div class="project-overlay">
+            <h3>Cineplexx Beo Shopping</h3>
+            <span>Cinema Fit-Out · for Studio M</span>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/Cineplexx Galerija/viber_image_2026-03-31_13-01-24-634.jpg" alt="Cineplexx Galerija" loading="lazy" />
+          <div class="project-overlay">
+            <h3>Cineplexx Galerija</h3>
+            <span>20 Installers · ~80% Cinema · for Studio M</span>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/Bosch Airport City/20200511_162519.jpg" alt="Bosch Airport City" loading="lazy" />
+          <div class="project-overlay">
+            <h3>Bosch Airport City</h3>
+            <span>2 Full Floors · for Studio M</span>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/HTEC/IMG_0655.HEIC.jpeg" alt="HTEC" loading="lazy" />
+          <div class="project-overlay">
+            <h3>HTEC, Milutina Milankovića</h3>
+            <span>7th &amp; 8th Floor · 16 Workers · for Studio M</span>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/Sidek/viber_image_2026-03-31_12-57-15-565.jpg" alt="Sidek" loading="lazy" />
+          <div class="project-overlay">
+            <h3>Sidek Business Premises</h3>
+            <span>Drywall &amp; Decorative Painting</span>
+          </div>
+        </div>
+        <div class="project-item">
+          <img src="images/Soljica Caffe/viber_image_2026-03-31_12-57-18-433.jpg" alt="Soljica Caffe" loading="lazy" />
+          <div class="project-overlay">
+            <h3>Soljica Caffe</h3>
+            <span>Interior Fit-Out &amp; Finishing</span>
+          </div>
+        </div>
+      </div>
+      <div class="projects-cta">
+        <a href="projects.html" class="btn btn-primary">All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!--
+    GOAL BANNER
+    Full-width navy quote strip — company mission statement.
+  -->
+  <section class="goal-banner">
+    <div class="container">
+      <p>Our goal is to be not just a contractor, but a reliable partner — one that helps clients deliver their projects on time, with precision and confidence.</p>
+    </div>
+  </section>
+
+  <!--
+    FOOTER
+    4-column grid: brand/social | info links | services links | contact details.
+    Followed by a bottom bar with copyright notice.
+  -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="images/logo.png" alt="Faros Plus" class="footer-logo" />
+        </div>
+        <p>Suva gradnja.<br />Izvedeno sa preciznošću.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="service.html">Soundproofing</a></li>
+          <li><a href="service.html">Plasterboard Installation</a></li>
+          <li><a href="service.html">Renovations</a></li>
+          <li><a href="service.html">Painting Works</a></li>
+          <li><a href="service.html">Plaster Works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Contact</h4>
+        <p>Phone: <a href="tel:+381633627780">+381 63 362 778</a></p>
+        <p>Email: <a href="mailto:office@farosplus.com">office@farosplus.com</a></p>
+        <p>Takovska 45, Belgrade, Serbia</p>
+        <p class="footer-legal">Reg. No: 21357308 · VAT: 110507554</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; 2026 Faros Plus. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</a>
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lb-close">&times;</button>
+    <button class="lightbox-prev" id="lb-prev">&#8592;</button>
+    <img class="lightbox-img" id="lb-img" src="" alt="" />
+    <button class="lightbox-next" id="lb-next">&#8594;</button>
+    <span class="lightbox-counter" id="lb-counter"></span>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
