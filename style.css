@@ -140,25 +140,12 @@ ul { list-style: none; }
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: var(--white);
-  border-radius: 50%;
-  width: 86px;
-  height: 86px;
-  padding: 0;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.22);
   flex-shrink: 0;
-  overflow: hidden;
 }
 .logo img {
-  height: 80px;
-  width: 80px;
-  object-fit: contain;
-  filter: none;
-  border-radius: 50%;
-}
-.site-header.scrolled .logo img {
-  filter: none;
+  height: 54px;
+  width: auto;
+  display: block;
 }
 
 .main-nav ul {
@@ -566,24 +553,13 @@ ul { list-style: none; }
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .footer-logo-wrap {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--white);
-  border-radius: 50%;
-  width: 110px;
-  height: 110px;
-  padding: 0;
+  display: block;
   margin-bottom: 16px;
-  overflow: hidden;
 }
 .footer-logo {
-  height: 104px;
-  width: 104px;
-  object-fit: contain;
-  filter: none;
+  height: 72px;
+  width: auto;
   display: block;
-  border-radius: 50%;
 }
 .footer-brand p {
   font-size: 0.88rem;
@@ -1348,8 +1324,7 @@ ul { list-style: none; }
 
 /* ====== MOBILE IMPROVEMENTS ====== */
 @media (max-width: 768px) {
-  .logo { width: 64px; height: 64px; }
-  .logo img { width: 64px; height: 64px; transform: scale(1.35); }
+  .logo img { height: 42px; }
   .page-hero { padding: 155px 0 48px; }
   .hero { min-height: 400px; }
   .hero-content { padding-top: 150px; }
