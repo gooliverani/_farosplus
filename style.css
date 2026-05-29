@@ -194,6 +194,10 @@ ul { list-style: none; }
   background: var(--white);
   transition: transform var(--transition), opacity var(--transition);
 }
+/* Hamburger → X animation when nav is open */
+.site-header.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.site-header.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.site-header.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ================================================
    HERO SLIDER
@@ -914,28 +918,58 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
   .header-inner {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     height: auto;
-    padding-top: 10px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     align-items: center;
   }
   .main-nav {
-    position: static;
-    transform: none;
-    width: 100%;
-    flex: 0 0 100%;
-    order: 3;
-    background: transparent;
-    padding: 4px 0 0;
-    box-shadow: none;
-    transition: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--navy-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
   }
-  .main-nav.open { transform: none; }
-  .main-nav ul { flex-direction: row; justify-content: space-between; gap: 0; flex-wrap: nowrap; }
-  .main-nav a { display: block; padding: 7px 2px; font-size: 0.7rem; letter-spacing: 0.05em; border-bottom: 2px solid transparent; }
-  .nav-toggle { display: none; }
-  .lang-switch { margin-left: auto; }
+  .main-nav.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+  }
+  .main-nav a {
+    display: block;
+    padding: 8px 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.12em;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+  }
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+    order: 2;
+    position: relative;
+    z-index: 1200;
+  }
+  .lang-switch {
+    margin-left: 16px;
+    order: 1;
+    position: relative;
+    z-index: 1200;
+  }
 
   .about-strip-inner { grid-template-columns: 1fr; gap: 36px; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
@@ -1340,6 +1374,7 @@ ul { list-style: none; }
     position: static;
     top: auto;
     left: auto;
+    margin-left: 12px;
   }
   .logo img { height: 52px; }
   .page-hero { padding: 155px 0 48px; }

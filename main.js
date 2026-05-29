@@ -29,18 +29,19 @@ if (header) {
 /* ====== MOBILE NAV TOGGLE ======
    Toggles the .open class on <nav> when the hamburger button is clicked.
    A document-level click listener closes the menu when tapping outside.
-   Note: at ≤768px the nav is always-visible (no hamburger); this code
-   is retained for potential future breakpoint adjustments.
+   On mobile (≤768px) the nav overlays the full screen with centered links.
    --------------------------------------------------------------- */
 const navToggle = document.getElementById('nav-toggle');
 const mainNav   = document.getElementById('main-nav');
 if (navToggle && mainNav) {
   navToggle.addEventListener('click', () => {
     mainNav.classList.toggle('open');
+    if (header) header.classList.toggle('nav-open', mainNav.classList.contains('open'));
   });
   document.addEventListener('click', (e) => {
     if (header && !header.contains(e.target)) {
       mainNav.classList.remove('open');
+      header.classList.remove('nav-open');
     }
   });
 }
