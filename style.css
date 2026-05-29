@@ -136,16 +136,25 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   height: 100px;
+  padding-left: 190px;
 }
 .logo {
+  position: absolute;
+  top: 10px;
+  left: 24px;
+  z-index: 1100;
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 .logo img {
-  height: 92px;
+  height: 130px;
   width: auto;
   display: block;
+  /* Chrome sub-pixel SVG edge artifact fix — forces GPU compositing */
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .main-nav ul {
@@ -892,6 +901,9 @@ ul { list-style: none; }
    RESPONSIVE
    ================================================ */
 @media (max-width: 1024px) {
+  .logo { position: static; top: auto; left: auto; }
+  .logo img { height: 72px; }
+  .header-inner { padding-left: 0; }
   .service-card { flex: 0 0 calc(50% - 12px); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .about-grid, .contact-grid { gap: 40px; }
@@ -1324,6 +1336,11 @@ ul { list-style: none; }
 
 /* ====== MOBILE IMPROVEMENTS ====== */
 @media (max-width: 768px) {
+  .logo {
+    position: static;
+    top: auto;
+    left: auto;
+  }
   .logo img { height: 52px; }
   .page-hero { padding: 155px 0 48px; }
   .hero { min-height: 400px; }
