@@ -2,7 +2,7 @@
 
 > **Dry Construction. Executed with Precision.**
 
-[![Website](https://img.shields.io/badge/Live%20Site-farosplus.com-blue?style=flat-square)](https://gooliverani.github.io/_farosplus)
+[![Website](https://img.shields.io/badge/Live%20Site-farosplus.com-blue?style=flat-square)](https://farosplus.com)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![HTML](https://img.shields.io/badge/HTML-72.9%25-orange?style=flat-square)]()
 [![CSS](https://img.shields.io/badge/CSS-20.1%25-blue?style=flat-square)]()
@@ -136,9 +136,9 @@ automatically on every push to the `master` branch. Configuration lives in
 [`wrangler.jsonc`](wrangler.jsonc) — `"assets": { "directory": "." }` serves the repo
 root as-is, with no build step.
 
-**Custom domain:** `farosplus.com` (registered at GoDaddy). DNS is being migrated to
-Cloudflare nameservers; once propagated, the domain is attached to the project and SSL
-is provisioned automatically.
+**Custom domain:** live at **[farosplus.com](https://farosplus.com)** (registered at
+GoDaddy, DNS delegated to Cloudflare nameservers). The domain is attached to the project
+with automatic SSL.
 
 **Contact email:** the contact page links to `office@farosplus.com`. Receiving mail at
 that address is handled separately (e.g. Cloudflare Email Routing) and is independent
