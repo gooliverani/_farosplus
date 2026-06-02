@@ -3,7 +3,7 @@
  * @project     Faros Plus — Corporate Website
  * @description All client-side behaviour: sticky header, hero slider,
  *              services card slider, lightbox gallery, scroll fade-in
- *              animations, back-to-top button, and contact form feedback.
+ *              animations, and back-to-top button.
  * @version     1.0.0
  */
 
@@ -277,31 +277,5 @@ if ('IntersectionObserver' in window) {
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     obs.observe(el);
-  });
-}
-
-/* ====== CONTACT FORM ======
-   Currently provides visual feedback only (no server-side submission).
-   To enable real email delivery, integrate Formspree (formspree.io):
-     1. Register and create a form — copy the endpoint URL.
-     2. Add  action="https://formspree.io/f/YOUR_ID"  to the <form> tag.
-     3. Replace e.preventDefault() with a native/fetch submit.
-   --------------------------------------------------------------- */
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn    = contactForm.querySelector('button[type="submit"]');
-    const status = document.getElementById('form-status');
-    const original = btn.textContent;
-    btn.textContent = 'Message Sent!';
-    btn.disabled = true;
-    if (status) status.textContent = 'Thank you — we will be in touch shortly.';
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.disabled = false;
-      if (status) status.textContent = '';
-      contactForm.reset();
-    }, 4000);
   });
 }

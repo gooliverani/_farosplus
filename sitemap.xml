@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://farosplus.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/index-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/index-sr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/index-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/about-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/about-sr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/about-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/service.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/service.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/service-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/service-sr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/service.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/service-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/projects.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/projects-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/projects-sr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/projects.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/projects-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/contact-sr.html" />
+  </url>
+  <url>
+    <loc>https://farosplus.com/contact-sr.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://farosplus.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="sr" href="https://farosplus.com/contact-sr.html" />
+  </url>
+</urlset>

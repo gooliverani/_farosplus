@@ -27,11 +27,14 @@ Three shared assets back every page:
 
 Key behaviors in `main.js`, all keyed off specific element IDs/classes that the HTML must provide:
 - **Header scroll** — homepage header is transparent until 40px scroll, then `.scrolled` (navy). Inner pages are detected by the presence of `.page-hero` and are always `.scrolled` so the logo stays visible over the banner.
-- **Hero slider** — `.hero-slide` / `.dot` elements, auto-advances 5.5s, arrows/dots/touch-swipe.
+- **Mobile nav toggle** — `#nav-toggle` button toggles `.open` on `#main-nav` (and `.nav-open` on the header); a document-level click closes it when tapping outside the header.
+- **Hero slider** — `.hero-slide` / `.dot` elements, auto-advances 5.5s, arrows/dots/touch-swipe. The auto-play timer resets on any manual interaction.
 - **Services card slider** — `#services-track`, transform-based; visible card count is responsive (1 / 2 / 3). The gap constant in `moveSvc()` (`24`) must match `gap: 24px` in the `.services-track` CSS rule.
 - **Lightbox** — IIFE-scoped; opens on `.photo-thumb` clicks, grouped by parent `.project-photo-grid`, reads full-size src from each thumb's `data-src`.
-- **Scroll fade-in** — `IntersectionObserver` applies inline opacity/transform to a fixed selector list of element classes.
-- **Contact form** — visual feedback only, no submission. To enable real email, wire up Formspree per the comment block at the bottom of `main.js`.
+- **Back-to-top** — `#back-to-top` button gets `.visible` after 400px scroll; click smooth-scrolls to top.
+- **Scroll fade-in** — `IntersectionObserver` applies inline opacity/transform to a fixed selector list of element classes. Adding a new element type to the animation requires adding its class to that selector in `main.js`.
+
+The Contact page has no form — it shows contact details plus an "Email Us" button (`mailto:office@farosplus.com`). There is no form backend.
 
 ## Bilingual page pairing (most important convention)
 
