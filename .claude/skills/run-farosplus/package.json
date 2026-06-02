@@ -1,0 +1,10 @@
+{
+  "name": "run-farosplus",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Headless driver for the Faros Plus static site",
+  "dependencies": {
+    "playwright": "1.60.0"
+  }
+}
