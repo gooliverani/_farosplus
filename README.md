@@ -24,6 +24,8 @@ This repository contains the official corporate website for **Faros Plus**, a pr
 - 🖼️ **Projects Portfolio** — filterable grid with hover overlays and a lightbox image viewer
 - 📱 **Fully Responsive** — mobile-first design with a hamburger navigation
 - 🔝 **Sticky Header** — transparent on load, navy background after 40 px scroll
+- 📨 **Direct Contact** — the contact page uses a direct **email button** (`mailto:`), no form backend to maintain
+- 🔍 **SEO & Social Ready** — per-page canonical + EN/SR `hreflang` tags, Open Graph cards, favicon, plus `sitemap.xml` and `robots.txt`
 - ⚡ **No Dependencies** — pure HTML5, CSS3 and vanilla ES6 JavaScript
 
 ---
@@ -57,7 +59,11 @@ _farosplus/
 ├── style.css             # Global stylesheet
 ├── main.js               # All interactive behaviour
 ├── images/               # Project photos and logo
-└── .gitignore
+├── robots.txt            # Crawler directives
+├── sitemap.xml           # Sitemap (all 10 pages, EN/SR paired)
+├── wrangler.jsonc        # Cloudflare deployment config (static assets)
+├── CLAUDE.md             # Guidance for Claude Code
+└── .claude/skills/run-farosplus/   # Local preview + screenshot driver
 ```
 
 ---
@@ -104,11 +110,42 @@ npx serve .
 # then visit http://localhost:3000
 ```
 
+### Preview & screenshot every page (headless)
+
+A small Playwright driver lives in `.claude/skills/run-farosplus/`. It serves the
+site, loads all 10 pages (EN + SR), screenshots each, and reports any console errors —
+handy for verifying a change without opening ten tabs by hand.
+
+```bash
+cd .claude/skills/run-farosplus
+npm install                  # one-time
+npx playwright install chromium   # one-time, downloads the browser
+node driver.mjs              # all pages → ./screenshots/
+node driver.mjs contact.html # a single page
+```
+
+> Playwright is dev-only tooling scoped to that folder — the website itself stays
+> dependency-free.
+
 ---
 
 ## Deployment
 
-The site is deployed via **GitHub Pages** from the `master` branch.
+The site deploys on **Cloudflare** (Workers with static assets) and rebuilds
+automatically on every push to the `master` branch. Configuration lives in
+[`wrangler.jsonc`](wrangler.jsonc) — `"assets": { "directory": "." }` serves the repo
+root as-is, with no build step.
+
+**Custom domain:** `farosplus.com` (registered at GoDaddy). DNS is being migrated to
+Cloudflare nameservers; once propagated, the domain is attached to the project and SSL
+is provisioned automatically.
+
+**Contact email:** the contact page links to `office@farosplus.com`. Receiving mail at
+that address is handled separately (e.g. Cloudflare Email Routing) and is independent
+of the site code.
+
+> The site was previously hosted on GitHub Pages from `master`; the markup is
+> host-agnostic (all links relative), so it runs unchanged on Cloudflare.
 
 ---
 
