@@ -74,7 +74,6 @@ _farosplus/
 - **Plasterboard Installation** — metal stud framing, gypsum board partitions, suspended ceilings, fire-rated configurations
 - **Renovations** — full interior fit-out from bare shell to handover
 - **Painting Works** — interior & exterior, including premium decorative finishes (Oikos Travertino Romano)
-- **Plaster Works** — machine and hand-applied gypsum, cement and decorative plasters
 
 ---
 
