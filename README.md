@@ -58,11 +58,13 @@ _farosplus/
 ├── contact-sr.html       # Contact (SR)
 ├── style.css             # Global stylesheet
 ├── main.js               # All interactive behaviour
+├── check-parity.js       # EN/SR structural-parity check (run by the pre-commit hook)
 ├── images/               # Project photos and logo
 ├── robots.txt            # Crawler directives
 ├── sitemap.xml           # Sitemap (all 10 pages, EN/SR paired)
 ├── wrangler.jsonc        # Cloudflare deployment config (static assets)
 ├── CLAUDE.md             # Guidance for Claude Code
+├── .githooks/            # Shared git hooks (pre-commit: EN/SR parity)
 └── .claude/skills/run-farosplus/   # Local preview + screenshot driver
 ```
 
@@ -125,6 +127,32 @@ node driver.mjs contact.html # a single page
 
 > Playwright is dev-only tooling scoped to that folder — the website itself stays
 > dependency-free.
+
+### Keeping EN/SR pages in parity
+
+Every page is a structurally identical EN/SR pair (`about.html` ↔ `about-sr.html`)
+that shares one `main.js` and one `style.css`. Because the script binds behaviour by
+element ID/class, a structural change made to one variant but not its twin breaks
+silently — the affected feature simply no-ops on the un-mirrored page, with no error.
+
+`check-parity.js` guards against this. It derives the hook vocabulary directly from
+`main.js` (`getElementById` / `querySelector` calls) and verifies every EN page exposes
+the same hooks as its `-sr` twin:
+
+```bash
+node check-parity.js   # exits 1 on any mismatch
+```
+
+A shared pre-commit hook in `.githooks/` runs it automatically whenever an `.html` or
+`main.js` file is staged. **One-time setup per clone** (git does not track the hooks
+path):
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Requires Node (already needed for the preview driver above). To bypass the check for a
+single commit, use `git commit --no-verify`.
 
 ---
 

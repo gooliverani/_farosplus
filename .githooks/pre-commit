@@ -1,0 +1,12 @@
+#!/bin/sh
+# Block commits where an EN page and its -sr twin have drifted out of structural parity.
+# Skip if no HTML or main.js is staged — parity only matters when those change.
+if git diff --cached --name-only | grep -qE '(\.html|main\.js)$'; then
+  echo "Running EN/SR hook-parity check..."
+  if ! node check-parity.js; then
+    echo ""
+    echo "pre-commit: EN/SR page parity check failed — fix the mismatch above or commit with --no-verify to override."
+    exit 1
+  fi
+fi
+exit 0
