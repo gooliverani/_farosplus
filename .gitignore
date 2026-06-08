@@ -16,3 +16,6 @@ npm-debug.log*
 !.dev.vars.example
 .env*
 !.env.example
+
+# Local Claude Code notes (keep the tracked .claude/skills/ driver)
+.claude/*.txt
