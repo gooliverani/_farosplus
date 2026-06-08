@@ -19,3 +19,6 @@ npm-debug.log*
 
 # Local Claude Code notes (keep the tracked .claude/skills/ driver)
 .claude/*.txt
+
+# Knowledge-graph output (graphify)
+graphify-out/
