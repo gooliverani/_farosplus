@@ -1092,7 +1092,7 @@ ul { list-style: none; }
   color: var(--navy);
   margin-bottom: 6px;
 }
-.project-block-meta {
+.project-meta-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -1104,6 +1104,7 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
   background: var(--gray-bg);
   color: var(--gray);
   padding: 4px 12px;
